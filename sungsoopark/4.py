@@ -11,3 +11,21 @@ for user, status in users.copy().items():
 
 print("active users:", users)
 print("inactive users:", inactive_users)
+
+
+#솔루션
+# users = {"Hans": "active", "Éléonore": "inactive", "Ken": "active"}
+
+# inactive_users = {}
+# active_users = {}
+
+# for user, status in users.items():
+#     if status == "inactive":
+#         inactive_users[user] = status
+#     else:
+#         active_users[user] = status
+
+# users = active_users
+
+# print("active users:", users)
+# print("inactive users:", inactive_users)
