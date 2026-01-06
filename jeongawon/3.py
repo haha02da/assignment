@@ -1,4 +1,5 @@
 basket = ["apple","banana","apple","orange","banana","apple"]
+
 # 중복 제거한 품목 출력 (set)
 unique_items = set(basket)
 print("중복 제거:",unique_items)
