@@ -1,0 +1,9 @@
+users = {"Hans": "active", "Éléonore": "inactive", "Ken": "active"}
+
+# 여기에 코드를 작성하면 됩니다.
+
+# print("active users:", users)
+# print("inactive users:", inactive_users)
+for user, status in users.items():
+        if status == "inactive":
+            print(user, status)
