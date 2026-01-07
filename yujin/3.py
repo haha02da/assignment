@@ -15,3 +15,5 @@ print("많이 담긴 순서:", sorted_items)
 # 여기에 코드를 작성하면 됩니다.
 name_lengths = {item: len(item) for item in unique_items}
 print("품목 이름 길이:", name_lengths)
+
+print("과제 3 제출")
