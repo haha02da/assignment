@@ -2,6 +2,9 @@ import random
 import time
 import sys
 
+class OutOfRangeError(Exception):
+    pass
+
 def up_down_game():
     answer = random.randint(1,20)
     print("Random Number Generated!")
@@ -12,7 +15,11 @@ def up_down_game():
         while True:
             try:
                 user_input = int(sys.stdin.readline())
+                if user_input < 1 or user_input > 20:
+                    raise OutOfRangeError()
                 break
+            except OutOfRangeError:
+                print('Enter only numbers between 1 to 20!')
             except ValueError:
                 print('Enter only numbers between 1 to 20!')
 
@@ -22,11 +29,12 @@ def up_down_game():
             print('UP')
         else:
             print('정답\n')
-            break
+            return
 
     print('실패\n')
+    print(f'Answer : {answer}')
     return
     
 while True:
     up_down_game()
-    time.sleep(2)
+    time.sleep(1)
