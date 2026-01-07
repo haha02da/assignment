@@ -9,7 +9,12 @@ def up_down_game():
 
     for cnt in range(1,6):
         print(f"Enter Your Answer(1~20) --- #({cnt} / 5)")
-        user_input = int(sys.stdin.readline())
+        while True:
+            try:
+                user_input = int(sys.stdin.readline())
+                break
+            except ValueError:
+                print('Enter only numbers between 1 to 20!')
 
         if user_input > answer:
             print('DOWN')
@@ -19,8 +24,9 @@ def up_down_game():
             print('정답\n')
             break
 
+    print('실패\n')
     return
     
 while True:
     up_down_game()
-    time.sleep(3)
+    time.sleep(2)
