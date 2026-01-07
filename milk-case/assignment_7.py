@@ -16,10 +16,10 @@ def up_down_game():
             try:
                 user_input = int(sys.stdin.readline())
                 if user_input < 1 or user_input > 20:
-                    raise OutOfRangeError('Enter only numbers between 1 to 20!')
+                    raise OutOfRangeError()
                 break
-            except OutOfRangeError as e:
-                print(e)
+            except OutOfRangeError:
+                print('Enter only numbers between 1 to 20!')
             except ValueError:
                 print('Enter only numbers between 1 to 20!')
 
